@@ -19,7 +19,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 app.use(express.json());
-console.log(process.env.MONGO_URI,"uri");
+
 mongoose.connect("mongodb+srv://shifa:shifamemon@cluster0.xlq4f7s.mongodb.net/files", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.error("MongoDB Connection Error:", err));
@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
   res.send("Hello AWS");
 });
 
-const PORT = 8080;
+const PORT = 8081;
 
 const config = {
   credentials: {
