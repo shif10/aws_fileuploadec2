@@ -139,6 +139,6 @@ async function deleteFile(S3Key) {
     await deleteFile("image/new/dummy-image.jpg"); 
   })();
 
-  app.listen(PORT, () => {
+  app.listen(PORT,"0.0.0.0", () => {
     console.log(`App is listening on port ${PORT}`);
   });
