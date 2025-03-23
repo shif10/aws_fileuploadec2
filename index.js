@@ -33,6 +33,7 @@ const fileSchema = new mongoose.Schema({
 const File = mongoose.model("File", fileSchema);
 app.get("/", (req, res) => {
   console.log("hello aws");
+  console.log("comeing")
   res.send("Hello AWS");
 });
 
