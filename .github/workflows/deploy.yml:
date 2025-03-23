@@ -3,7 +3,7 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - main  # Change this if needed
+      - master  # Change this if needed
 
 jobs:
   deploy:
@@ -21,6 +21,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ec2-user/aws_fileuploadec2
-            git pull origin master
-            npm install
-            pm2 restart index
+            ./deploy.sh
